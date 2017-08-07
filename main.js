@@ -1,6 +1,4 @@
-
-
-fetch("https://api.github.com/users/justinjkim").then(
+fetch("https://randomuser.me/api/?results=1").then(
 	function(response) {
     if (response.status !== 200) {
       console.log('Looks like there was a problem. Status Code: ' +
