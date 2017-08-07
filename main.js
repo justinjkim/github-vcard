@@ -18,6 +18,10 @@ fetch("https://api.github.com/users/justinjkim").then(
     		let avatar = githubAPI.avatar_url;
 
   			// template literal
+  			let headerH1 = `
+  				<h1>${name}</h1>
+  			`
+
   			let basics =  `
   				<h1>The Basics</h1>
   				<ul>
@@ -35,9 +39,10 @@ fetch("https://api.github.com/users/justinjkim").then(
   				<img src="${avatar}" alt="picture" />
   			`
 
-
+  			let header = document.querySelector("header");
   			let sectionBasics = document.getElementById("basics");
   			let sectionStory = document.getElementById("story");
+  			header.innerHTML = headerH1;
       	sectionBasics.innerHTML = basics;
       	sectionStory.innerHTML = story;
 
